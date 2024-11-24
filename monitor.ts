@@ -137,8 +137,8 @@ async function monitorDoors() {
         if (!doorOpenTimer) {
           doorOpenTimer = setTimeout(() => {
             if (notificationCount < maxNotifications) {
-              console.log(`${contactDevice.name} has been left open for ${30 * (notificationCount + 1)} seconds!`);
-              sendNotification(contactDevice.name, `${contactDevice.name} has been left open for ${30 * (notificationCount + 1)} seconds!`);
+              console.log(`${contactDevice.name} has been left open for ${notificationInterval * (notificationCount + 1)} seconds!`);
+              sendNotification(contactDevice.name, `${contactDevice.name} has been left open for ${notificationInterval * (notificationCount + 1)} seconds!`);
               notificationCount++;
             } else {
               console.log(`${contactDevice.name} has been opened for too long! No more notifications will be sent.`);
