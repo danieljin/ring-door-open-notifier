@@ -2,6 +2,9 @@
   "compilerOptions": {
     "target": "es2020",
     "module": "commonjs",
+    "lib": [
+      "ES2021.String"
+    ],
     "outDir": "./lib",
     "strict": true,
     "esModuleInterop": true,

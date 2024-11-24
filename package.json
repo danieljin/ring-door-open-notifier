@@ -1,26 +1,20 @@
 {
-  "name": "ring-client-example",
+  "name": "ring-door-open-notifier",
   "version": "1.0.0",
-  "description": "Example use of the `ring-client-api` npm package",
+  "description": "Using the `ring-client-api` npm package to notify if any doors are left open",
   "main": "lib/index.js",
   "scripts": {
-    "start": "npm run ts-example",
+    "start": "npm run ts-monitor",
     "auth": "ring-auth-cli",
-    "ts-example": "tsc && node lib/example.js"
+    "ts-monitor": "tsc && node lib/monitor.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dgreif/ring-client-example.git"
-  },
-  "bugs": {
-    "url": "https://github.com/dgreif/ring-client-example/issues"
-  },
-  "homepage": "https://github.com/dgreif/ring-client-example#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
+    "nodemailer": "^6.9.16",
     "ring-client-api": "^11.7.1"
   },
   "devDependencies": {
+    "@types/nodemailer": "^6.4.16",
     "@types/ws": "^8.5.4",
     "typescript": "^4.9.5"
   }
